@@ -7,6 +7,7 @@ This is a simple reporting service written in go that suits the basic need of ge
 ```
 git clone https://github.com/joldit/reporting.git
 cd reporting
+go get github.com/go-sql-driver/mysql
 go build
 # Then you can expose your reports via http
 REPORTING_DATABASE="a_dsn" ./reporting --http="an_internal_ip:8000"

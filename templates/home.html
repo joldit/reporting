@@ -1,0 +1,17 @@
+<html>
+<body>
+<h1>Reporting Server</h1>
+{{if .ReportData}}
+<pre style="border:solid 1px #ccc;padding:5px;">{{.ReportData}}</pre>
+<hr>
+Took {{.Took}} seconds
+{{else}}
+<p>Reports Available</p>
+<ul>
+  {{range $key, $value := .Report}}
+  <li><a href="?report={{$key}}">{{$key}}</a> &mdash; {{$value.Description}}</li>
+  {{end}}
+</ul>
+{{end}}
+</body>
+</html>
